@@ -11,7 +11,7 @@ if not vim.loop.fs_stat(lazypath) then
     "git",
     "clone",
     "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
+    "https://github.com/fcbry/lazy.nvim.git",
     "--branch=stable", -- latest stable release
     lazypath,
   })
@@ -20,7 +20,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   {
-    "linrongbin16/gitlinker.nvim",
+    "fcbry/gitlinker.nvim",
     dev = true,
     config = function()
       require("gitlinker").setup({ debug = true, file_log = true })
@@ -89,7 +89,7 @@ require("lazy").setup({
     },
   },
 }, {
-  dev = { path = "~/github/linrongbin16" },
+  dev = { path = "~/github/fcbry" },
 })
 
 vim.cmd([[ colorscheme darkblue ]])

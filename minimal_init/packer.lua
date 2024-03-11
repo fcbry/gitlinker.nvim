@@ -14,7 +14,7 @@ local ensure_packer = function()
       "clone",
       "--depth",
       "1",
-      "https://github.com/wbthomason/packer.nvim",
+      "https://github.com/fcbry/packer.nvim",
       install_path,
     })
     vim.cmd([[packadd packer.nvim]])
@@ -26,9 +26,9 @@ end
 local packer_bootstrap = ensure_packer()
 
 require("packer").startup(function(use)
-  use("wbthomason/packer.nvim")
+  use("fcbry/packer.nvim")
   use({
-    vim.fn.expand("~/github/linrongbin16/gitlinker.nvim"),
+    vim.fn.expand("~/github/fcbry/gitlinker.nvim"),
     config = function()
       require("gitlinker").setup({ debug = true, file_log = true })
     end,
